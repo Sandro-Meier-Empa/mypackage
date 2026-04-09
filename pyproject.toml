@@ -14,5 +14,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-  "seaborn"
+  "seaborn",
+  "pytest",
+  "pytest-cov"
 ]
