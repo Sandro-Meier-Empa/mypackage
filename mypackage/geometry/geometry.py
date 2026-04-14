@@ -1,4 +1,6 @@
 from ..utils import distance
+import xarray as xr
+import ddeq
 
 
 class Point:
@@ -21,3 +23,11 @@ def any_funtion(x: int) -> int:
     if x == 0:
         return 0
     return x * 2
+
+
+def use_xarray(data_path: str) -> xr.Dataset:
+    return xr.open_dataset(data_path)
+
+
+def use_ddeq(r: float):
+    return ddeq.misc.create_disk(r)

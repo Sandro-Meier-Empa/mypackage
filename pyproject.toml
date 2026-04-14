@@ -10,11 +10,13 @@ license = {file = "license.txt"}
 
 dependencies = [
     "scipy",
+    "xarray",
 ]
 
 [project.optional-dependencies]
 dev = [
   "seaborn",
   "pytest",
-  "pytest-cov"
+  "pytest-cov",
+  "pyright",
 ]
