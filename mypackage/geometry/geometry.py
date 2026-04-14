@@ -1,5 +1,6 @@
 from ..utils import distance
 import xarray as xr
+import numpy as np
 import ddeq
 
 
@@ -31,3 +32,7 @@ def use_xarray(data_path: str) -> xr.Dataset:
 
 def use_ddeq(r: float):
     return ddeq.misc.create_disk(r)
+
+
+def add_numpy(x: int) -> np.ndarray:
+    return np.array([x, x * 2, x * 3])

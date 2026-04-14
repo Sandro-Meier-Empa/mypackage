@@ -1,1 +1,2 @@
-from .geometry import Point, Line
+from .geometry import Line as Line
+from .geometry import Point as Point

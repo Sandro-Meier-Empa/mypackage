@@ -1,0 +1,9 @@
+{
+  "include": [
+    "mypackage",
+    "tests"
+  ],
+  "typeCheckingMode": "standard",
+  "venvPath": "/users/smeier",
+  "venv": "py314_eiger"
+}

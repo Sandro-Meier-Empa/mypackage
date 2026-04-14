@@ -43,10 +43,7 @@ repos:
         files: ^.*\.(py|c|h|md|rst|yml)$
         args: ["--ignore-words", ".codespellignore"]
   # pyright for type checking
-  - repo: local
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.408
     hooks:
       - id: pyright
-        name: pyright
-        entry: pyright
-        language: system
-        types_or: [python, pyi]
