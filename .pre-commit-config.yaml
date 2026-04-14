@@ -1,6 +1,7 @@
 ci:
   autoupdate_schedule: quarterly
 repos:
+  # Fixes end of line, trailing whitespace, checks yaml and large files
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
@@ -9,6 +10,7 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
         args: [--maxkb=6000]
+  # Ruff linter and formatter
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.15.9
     hooks:
@@ -21,13 +23,27 @@ repos:
         # Ruff formatter
         types_or: [python, pyi]
         name: ruff (format)
+  # yamlfmt for yaml formatting
   - repo: https://github.com/google/yamlfmt
     rev: v0.21.0
     hooks:
       - id: yamlfmt
         name: YAML (format)
         types: [yaml]
+  # nbstripout to remove output from Jupyter notebooks
   - repo: https://github.com/kynan/nbstripout
     rev: 0.9.1
     hooks:
       - id: nbstripout
+  # codespell for spell checking
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.1.0
+    hooks:
+      - id: codespell
+        files: ^.*\.(py|c|h|md|rst|yml)$
+        args: ["--ignore-words", ".codespellignore"]
+  # pyright for type checking
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.408
+    hooks:
+      - id: pyright
