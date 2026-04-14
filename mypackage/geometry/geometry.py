@@ -1,9 +1,11 @@
 from ..utils import distance
 
+
 class Point:
     def __init__(self, x: float, y: float) -> None:
         self.x = x
         self.y = y
+
 
 class Line:
     def __init__(self, p1: "Point", p2: "Point") -> None:
@@ -12,3 +14,10 @@ class Line:
 
     def length(self) -> float:
         return distance(self.p1, self.p2)
+
+
+def any_funtion(x: int) -> int:
+    """Ad a function with a lot of typoos in the name and docstring"""
+    if x == 0:
+        return 0
+    return x * 2
