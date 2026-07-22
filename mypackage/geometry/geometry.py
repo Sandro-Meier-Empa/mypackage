@@ -1,7 +1,6 @@
 from ..utils import distance
 import xarray as xr
 import numpy as np
-import ddeq
 
 
 class Point:
